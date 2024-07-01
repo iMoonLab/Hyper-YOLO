@@ -424,7 +424,6 @@ class HyPConv(nn.Module):
         self.fc = nn.Linear(c1, c2)
         self.v2e = MessageAgg(agg_method="mean")
         self.e2v = MessageAgg(agg_method="mean")
-        # self.v2v = MessageAgg(agg_method="mean")
 
 
     def forward(self, x, H):
