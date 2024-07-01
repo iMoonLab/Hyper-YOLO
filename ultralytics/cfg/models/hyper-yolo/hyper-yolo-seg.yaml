@@ -9,7 +9,7 @@ scales: # model compound scaling constants, i.e. 'model=hyper-yolon.yaml' will c
   s: [0.33, 0.50, 1024, 9]
   m: [0.67, 0.75, 768, 10]
   l: [1.00, 1.00, 512, 10]
-  x: [1.00, 1.25, 512, 10]
+  x: [1.00, 1.25, 512, 12]
 
 # Hyper-YOLO backbone
 backbone:
