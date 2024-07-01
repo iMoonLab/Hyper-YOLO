@@ -61,7 +61,7 @@ conda create -n Hyper-YOLO python=3.8
 conda activate Hyper-YOLO
 pip install -r requirements.txt  # install
 ```
-You also can use environment.yaml and conda command to install environment.
+You can also use the environment.yaml file and the conda command to install the required environment.
 ```bash
 conda env create -f environment.yaml
 ```
