@@ -111,7 +111,7 @@ python ultralytics/models/yolo/segment/predict.py
 
 
 # Export
-Here is an example code for exporting an ONNX model. If you need to export other formats, please refer to our sample code and the YOLOv8 documentation.
+Here is an example code for exporting an ONNX model. If you need to export other formats, please refer to our example code and the YOLOv8 documentation.
 ```bash
 python ultralytics/utils/export_onnx.py
 ```
