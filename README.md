@@ -45,34 +45,60 @@ Furthermore, we replace the neck of YOLOv9 with the proposed HyperC2Net of our H
 | Hyper-YOLOv1.1-T | 640       | 40.3 | 55.6 | 2.5M   | 10.8G   |
 | Hyper-YOLOv1.1-S | 640       | 48.0 | 64.5 | 7.6M   | 29.9G   |
 | Hyper-YOLOv1.1-M | 640       | 51.8 | 69.2 | 21.2M  | 87.4G   |
-| Hyper-YOLOv1.1-C | 640       | 53.1 | 70.2 | 29.8M  | 115.5G  |
+| Hyper-YOLOv1.1-C | 640       | 53.2 | 70.4 | 29.8M  | 115.5G  |
 
 
 # Installation
 
+Clone repo and create conda environment (recommended), install requirements.txt in a Python>=3.8.0 environment, including PyTorch>=1.8.
 Install the required packages by running the following command:
 
 ```bash
-xxx
+git clone https://github.com/iMoonLab/Hyper-YOLO.git  # clone
+cd Hyper-YOLO
+conda create -n Hyper-YOLO python=3.8
+conda activate Hyper-YOLO
+pip install -r requirements.txt  # install
 ```
 
-# Training
-
+# Datasets
+Data preparation. 
+Download MS COCO dataset images (train, val, test) and labels or prepare your custom data as below and modify the dataset path in ultralytics/cfg/datasets/coco.yaml.
 ```bash
-xxx
+coco
+--images
+  --train2017
+  --val2017
+--labels
+  --train2017
+  --val2017
+```
+# Training
+Most training configurations can change in the "Train settings" section of ultralytics/cfg/default.yaml. 
+The key factors are model,data,img,epoches,batch,device and training hyperparameters.
+model:hyper-yolon.yaml
+```bash
+python ultralytics/models/yolo/detect/train.py 
 ```
 
 # Evaluation
-
-## Detection
+Most evaluation configurations can change in the "Val/Test settings" section of ultralytics/cfg/default.yaml. 
+The key factors are model(weight),data,img,batch,conf,iou,half.
 ```bash
-xxx
+python ultralytics/models/yolo/detect/val.py
+```
+## Detection
+Most detection configurations can change in the "Predict settings" section of ultralytics/cfg/default.yaml.
+The key factors are model(weight),source,img,conf,iou.
+```bash
+python ultralytics/models/yolo/detect/detect.py
 ```
 ![Detection](docs/vis_det.png)
 
 ## Segmetation
+It is similiar with detection setting. Change model:hyper-yolon-seg.yaml.
 ```bash
-xxx
+python ultralytics/models/yolo/detect/train.py 
 ```
 ![Detection](docs/vis_seg.png)
 
@@ -80,7 +106,7 @@ xxx
 # Export
 
 ```bash
-xxx
+python ultralytics/utils/export_onnx.py
 ```
 
 # Acknowledgement
