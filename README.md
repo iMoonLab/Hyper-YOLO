@@ -50,8 +50,9 @@ Furthermore, we replace the neck of YOLOv9 with the proposed HyperC2Net of our H
 
 # Installation
 
-Clone repo and create conda environment (recommended), install requirements.txt in a Python>=3.8.0 environment, including PyTorch>=1.8.
-Install the required packages by running the following command:
+Clone repo and create conda environment (recommended).
+Then install requirements.txt in a Python>=3.8.0 environment, including PyTorch>=1.8.
+The command is as follows.
 
 ```bash
 git clone https://github.com/iMoonLab/Hyper-YOLO.git  # clone
@@ -60,10 +61,13 @@ conda create -n Hyper-YOLO python=3.8
 conda activate Hyper-YOLO
 pip install -r requirements.txt  # install
 ```
+You also can use environment.yaml and conda command to install environment.
+```bash
+conda env create -f environment.yaml
+```
 
 # Datasets
-Data preparation. 
-Download MS COCO dataset images (train, val, test) and labels or prepare your custom data as below and modify the dataset path in ultralytics/cfg/datasets/coco.yaml.
+Data Preparation: Download the MS COCO dataset images (training, validation, and test sets) and corresponding labels, or prepare your custom dataset as shown below. Additionally, modify the dataset path in ultralytics/cfg/datasets/coco.yaml to reflect the location of your data.
 ```bash
 coco
 --images
@@ -74,37 +78,40 @@ coco
   --val2017
 ```
 # Training
-Most training configurations can change in the "Train settings" section of ultralytics/cfg/default.yaml. 
-The key factors are model,data,img,epoches,batch,device and training hyperparameters.
-model:hyper-yolon.yaml
+Most of training configurations can change in the "Train settings" section of ultralytics/cfg/default.yaml. 
+The key factors are model, data, img, epoches, batch, device and training hyperparameters.
+For example, you can use "model: hyper-yolon.yaml" to train an object detection model.
 ```bash
 python ultralytics/models/yolo/detect/train.py 
 ```
 
 # Evaluation
-Most evaluation configurations can change in the "Val/Test settings" section of ultralytics/cfg/default.yaml. 
-The key factors are model(weight),data,img,batch,conf,iou,half.
+Most of evaluation configurations can change in the "Val/Test settings" section of ultralytics/cfg/default.yaml. 
+The key factors are model(weight), data, img, batch, conf, iou, half.
 ```bash
 python ultralytics/models/yolo/detect/val.py
 ```
 ## Detection
-Most detection configurations can change in the "Predict settings" section of ultralytics/cfg/default.yaml.
-The key factors are model(weight),source,img,conf,iou.
+Most of predict configurations can change in the "Predict settings" section of ultralytics/cfg/default.yaml.
+The key factors are model(weight), source, img, conf, iou.
 ```bash
-python ultralytics/models/yolo/detect/detect.py
+python ultralytics/models/yolo/detect/predict.py
 ```
 ![Detection](docs/vis_det.png)
 
-## Segmetation
-It is similiar with detection setting. Change model:hyper-yolon-seg.yaml.
+## Segmentation
+Here, our instance segmentation model configuration remains consistent with YOLOv8, by changing the object detection output head to an instance segmentation output head, while the backbone and neck remain unchanged. The model's training and testing process is similar to that of object detection.
+For example, you can use "model: hyper-yolon-seg.yaml" to train an instance segmentation model.
 ```bash
-python ultralytics/models/yolo/detect/train.py 
+python ultralytics/models/yolo/segment/train.py
+python ultralytics/models/yolo/segment/val.py
+python ultralytics/models/yolo/segment/predict.py 
 ```
 ![Detection](docs/vis_seg.png)
 
 
 # Export
-
+Here is an example code for exporting an ONNX model. If you need to export other formats, please refer to our sample code and the YOLOv8 documentation.
 ```bash
 python ultralytics/utils/export_onnx.py
 ```
