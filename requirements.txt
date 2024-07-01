@@ -14,7 +14,7 @@ torchvision>=0.9.0
 tqdm>=4.64.0
 
 # Logging -------------------------------------
-# tensorboard>=2.13.0
+tensorboard>=2.13.0
 # dvclive>=2.12.0
 # clearml
 # comet
@@ -41,5 +41,5 @@ py-cpuinfo  # display CPU info
 thop>=0.1.1  # FLOPs computation
 # ipython  # interactive notebook
 # albumentations>=1.0.3  # training augmentations
-# pycocotools>=2.0.6  # COCO mAP
+pycocotools>=2.0.6  # COCO mAP
 # roboflow
