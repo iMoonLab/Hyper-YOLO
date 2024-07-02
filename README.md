@@ -98,7 +98,7 @@ The key factors are model(weight), source, img, conf, iou.
 ```bash
 python ultralytics/models/yolo/detect/predict.py
 ```
-![Detection](docs/vis_det.png)
+![Detection](docs/vis_det.jpg)
 
 ## Segmentation
 Here, our instance segmentation model configuration remains consistent with YOLOv8, by changing the object detection output head to an instance segmentation output head, while the backbone and neck remain unchanged. The model's training and testing process is similar to that of object detection.
@@ -108,7 +108,7 @@ python ultralytics/models/yolo/segment/train.py
 python ultralytics/models/yolo/segment/val.py
 python ultralytics/models/yolo/segment/predict.py 
 ```
-![Detection](docs/vis_seg.png)
+![Detection](docs/vis_seg.jpg)
 
 
 # Export
