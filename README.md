@@ -1,6 +1,7 @@
 # Hyper-YOLO
 
 [Hyper-YOLO: When Visual Object Detection Meets Hypergraph Computation.](.)
+
 Yifan Feng, Jiangang Huang, Shaoyi Du, Shihui Ying, Xu Zhuang, Jason Wang, Jun-Hai Yong, Qionghai Dai, and Yue Gao. 
 
 <details>
@@ -12,7 +13,7 @@ Hyper-YOLO incorporates the proposed Mixed Aggregation Network (MANet) in its ba
 </details>
 
 
-# Performance
+# Performance on MS COCO
 
 <img src="docs/performance.png" width="70%">
 
