@@ -746,6 +746,7 @@ def yaml_model_load(path):
 
     unified_path = re.sub(r'(\d+)([nslmx])(.+)?$', r'\1\3', str(path))  # i.e. yolov8x.yaml -> yolov8.yaml
     unified_path = re.sub(r'(hyper-yolo)([nslmx])(.+)?$', r'\1\3', str(unified_path))
+    unified_path = re.sub(r'(hyper-yolot)(.+)?$', r'\1\2', str(unified_path))
 
     yaml_file = check_yaml(unified_path, hard=False) or check_yaml(path)
     d = yaml_load(yaml_file)  # model dict
@@ -769,8 +770,8 @@ def guess_model_scale(model_path):
     """
     with contextlib.suppress(AttributeError):
         import re
-        if re.search(r'(hyper-yolo)([nslmx])', Path(model_path).stem) is not None:
-            return re.search(r'(hyper-yolo)([nslmx])', Path(model_path).stem).group(2)
+        if re.search(r'(hyper-yolo)([tnslmx])', Path(model_path).stem) is not None:
+            return re.search(r'(hyper-yolo)([tnslmx])', Path(model_path).stem).group(2)
         else:
             return re.search(r'yolov\d+([nslmx])', Path(model_path).stem).group(1)  # n, s, m, l, or x
     return ''
