@@ -1,9 +1,9 @@
 # Ultralytics YOLO 🚀, AGPL-3.0 license
-# Hyper-YOLO object detection model with P3-P5 outputs. For Usage examples see https://docs.ultralytics.com/tasks/detect
+# Hyper-YOLO object detection model with N3-N5 outputs. 
 
 # Parameters
 nc: 80  # number of classes
-scales: # model compound scaling constants, i.e. 'model=hyper-yolon.yaml' will call hyper-yolo.yaml with scale 'n'
+scales: # model compound scaling constants, i.e. 'model=hyper-yolon-seg.yaml' will call hyper-yolo-seg.yaml with scale 'n'
   # [depth, width, max_channels, threshold]
   n: [0.33, 0.25, 1024, 6]
   s: [0.33, 0.50, 1024, 9]
