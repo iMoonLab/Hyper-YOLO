@@ -36,6 +36,7 @@ Our Hyper-YOLO enhances the YOLOv8 architecture with hypergraph computation. The
 
 ## Hyper-YOLO v1.1
 Furthermore, we replace the neck of YOLOv9 with the proposed HyperC2Net of our Hyper-YOLO, termed Hyper-YOLOv1.1. The source code of Hyper-YOLOv1.1 is avaiable in [here](https://github.com/iMoonLab/Hyper-YOLOv1.1). 
+
 Clearly, in each scale, the Hyper-YOLOv1.1 outperforms the YOLOv9, which demonstrates the effectiveness of our HyperC2Net in capturing high-order feature correlations. The comparison of four scale models are provided in the following table
 
 | Model            | Test Size | $AP^{val}$ | $AP^{val}_{50}$ | Params | FLOPs |
