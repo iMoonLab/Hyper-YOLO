@@ -2,7 +2,7 @@
 
 [Hyper-YOLO: When Visual Object Detection Meets Hypergraph Computation.](.)
 
-Yifan Feng, Jiangang Huang, Shaoyi Du, Shihui Ying, Xu Zhuang, Jason Wang, Jun-Hai Yong, Guiguang Ding, Rongrong Ji, and Yue Gao. 
+Yifan Feng, Jiangang Huang, Shaoyi Du, Shihui Ying, Jun-Hai Yong, Yipeng Li, Guiguang Ding, Rongrong Ji, and Yue Gao. 
 
 <details>
   <summary>
