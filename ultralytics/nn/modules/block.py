@@ -432,7 +432,7 @@ class HyPConv(nn.Module):
         E = self.v2e(x, H.transpose(1, 2).contiguous())
         # e -> v
         x = self.e2v(E, H)
-        # x = self.v2v(x, H.transpose(1, 2).contiguous())
+
         return x
 
 
