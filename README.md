@@ -15,7 +15,7 @@ Hyper-YOLO incorporates the proposed Mixed Aggregation Network (MANet) in its ba
 
 # Performance on MS COCO
 
-<img src="docs/performance.png" width="70%">
+<img src="docs/performance_v11.jpg" width="40%">
 
 ## Hyper-YOLO
 
