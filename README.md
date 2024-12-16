@@ -11,6 +11,8 @@ We introduce Hyper-YOLO, a new object detection method that integrates hypergrap
 Hyper-YOLO incorporates the proposed Mixed Aggregation Network (MANet) in its backbone for enhanced feature extraction and introduces the Hypergraph-Based Cross-Level and Cross-Position Representation Network (HyperC2Net) in its neck. HyperC2Net operates across five scales and breaks free from traditional grid structures, allowing for sophisticated high-order interactions across levels and positions. This synergy of components positions Hyper-YOLO as a state-of-the-art architecture, as evidenced by its superior performance on the COCO dataset. Hyper-YOLO-N significantly outperforms the advanced YOLOv8-N with 12\% $\text{AP}^{val}$ improvements. Compared with SOTA Gold-YOLO-N, Hyper-YOLO-N achieves 5\% $\text{AP}^{val}$ improvement with only 72\% parameters.
 </details>
 
+## NEWS 🔥
+- 2024/12/14: Our paper has been accepted by TPAMI.
 
 # Performance on MS COCO
 
