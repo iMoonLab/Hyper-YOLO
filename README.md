@@ -131,8 +131,9 @@ If you find our work useful in your research, please consider citing:
 @article{feng2024hyper,
   title={Hyper-YOLO: When Visual Object Detection Meets Hypergraph Computation},
   author={Feng, Yifan and Huang, Jiangang and Du, Shaoyi and Ying, Shihui and Yong, Jun-Hai and Li, Yipeng and Ding, Guiguang and Ji, Rongrong and Gao, Yue},
-  journal={arXiv preprint arXiv:2408.04804},
-  year={2024}
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  year={2025},
+  publisher={IEEE}
 }
 ```
 
