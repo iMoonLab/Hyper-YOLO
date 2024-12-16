@@ -1,8 +1,7 @@
 # Hyper-YOLO
 
-[Hyper-YOLO: When Visual Object Detection Meets Hypergraph Computation.](https://www.arxiv.org/abs/2408.04804)
+This repository contains the source code for the paper "Hyper-YOLO: When Visual Object Detection Meets Hypergraph Computation" published in IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI) 2025 by [Yifan Feng](https://fengyifan.site/), Jiangang Huang, Shaoyi Du, Shihui Ying, Jun-Hai Yong, Yipeng Li, Guiguang Ding, Rongrong Ji, and Yue Gao*. This paper is available at [here]([https://ieeexplore.ieee.org/abstract/document/10319392/](https://www.arxiv.org/abs/2408.04804)).
 
-Yifan Feng, Jiangang Huang, Shaoyi Du, Shihui Ying, Jun-Hai Yong, Yipeng Li, Guiguang Ding, Rongrong Ji, and Yue Gao. 
 
 <details>
   <summary>
